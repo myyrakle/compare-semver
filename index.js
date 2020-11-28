@@ -22,38 +22,32 @@ function compareSemver(lhs, rhs) {
 }
 
 // 왼쪽이 작으면 true
-function lessThanSemver(lhs, rhs)
-{
+function lessThanSemver(lhs, rhs) {
     return compareSemver(lhs, rhs) == -1;
 }
 
 // 왼쪽이 작거나 같으면 true
-function lessEqualSemver(lhs, rhs)
-{
+function lessEqualSemver(lhs, rhs) {
     return compareSemver(lhs, rhs) <= 0;
 }
 
 // 왼쪽이 크면 true
-function greaterThanSemver(lhs, rhs)
-{
+function greaterThanSemver(lhs, rhs) {
     return compareSemver(lhs, rhs) == 1;
 }
 
 // 왼쪽이 크거나 같으면 true
-function greaterEqualSemver(lhs, rhs)
-{
+function greaterEqualSemver(lhs, rhs) {
     return compareSemver(lhs, rhs) >= 0;
 }
 
 // 같으면 true
-function equalSemver(lhs, rhs)
-{
+function equalSemver(lhs, rhs) {
     return compareSemver(lhs, rhs) == 0;
 }
 
 // 다르면 true
-function notEqualSemver(lhs, rhs)
-{
+function notEqualSemver(lhs, rhs) {
     return compareSemver(lhs, rhs) != 0;
 }
 
@@ -66,6 +60,7 @@ module.exports = {
     equalSemver,
     notEqualSemver,
 }
+
 // example
 // compareSemver("1.2.0", "1.2.1"); // -1
 // lessThanSemver("1.3", "1.2.1"); // false
